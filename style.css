@@ -1,0 +1,544 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&family=Poppins:wght@300;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
+
+:root {
+    --normal-clr: hsl(240, 2%, 95%);
+    --cover-clr: hsla(0, 0%, 0%, 0.5);
+    --btn-clr: hsl(25, 60%, 65%);
+    --para-dark-clr: hsl(0, 0%, 40%);
+    --clr: hsl(0, 0%, 0%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    /* color:white; */
+}
+
+p {
+    line-height: 32px;
+    font-size: 17px;
+}
+
+h1 {
+    font-size: 40px;
+
+}
+
+.menu-div p,
+.fresh-beans p,
+.blog p {
+    color: var(--para-dark-clr);
+}
+
+
+nav ul {
+    /* padding: .75rem 0 0 0; */
+    padding: 1rem;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    gap: 1.5rem;
+}
+
+header {
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    /* padding: 0rem 2rem; */
+
+}
+
+nav {
+    position: absolute;
+    background: white;
+    width: 80%;
+    left: 10%;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 400ms ease;
+}
+
+nav a {
+    color: black;
+    transition: background-color .3s;
+    padding: .3rem;
+}
+
+nav a:hover {
+    background-color: black;
+    color: white;
+}
+
+
+
+header h1 {
+    margin: 0;
+    padding: .3rem 1rem;
+}
+
+
+.title,
+h3,
+h4,
+button {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+}
+
+p {
+    font-family: 'Nunito', sans-serif;
+}
+
+
+.title {
+    font-size: 50px;
+    letter-spacing: 2px;
+}
+
+.nav-toggle:checked~nav {
+    transform: scale(1, 1);
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    margin-left: 1em;
+    display: flex;
+    height: 100%;
+    align-items: center;
+
+}
+
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    background: black;
+    display: block;
+    width: 25px;
+    height: 2px;
+    border-radius: 2px;
+    position: relative;
+
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content: ' ';
+    position: absolute;
+}
+
+.nav-toggle-label span::before {
+    bottom: 5px;
+}
+
+.nav-toggle-label span::after {
+    top: 5px;
+}
+
+.landing,
+.menu-div,
+.story {
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.landing {
+    background-image: url(images/coffee-grinder.jpg);
+    /* object-fit: cover; */
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    background-size: cover;
+    background-position: center;
+    padding: 10rem 0;
+    color: white;
+    text-align: center;
+}
+
+.landing h1 {
+    font-size: 5.5vw;
+}
+
+.menu-div {
+    background-color: var(--normal-clr);
+    padding: 5rem 3rem;
+    text-align: center;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    margin: 2.5rem;
+}
+
+/* .menu-item-1 {
+    border: 2px solid red;
+} */
+
+.menu img {
+    border-radius: 50%;
+}
+
+.menu p {
+    margin-top: 0;
+}
+
+.menu h3 {
+    margin: 1rem;
+}
+
+.story {
+    text-align: center;
+    color: white;
+    padding: 4rem 0 0 0;
+    background-image: linear-gradient(hsl(0, 0%, 1%), hsla(0, 0%, 3%, 0.4));
+    background-blend-mode: color-burn;
+    position: relative;
+}
+
+.story p,
+.story h1 {
+    margin: 0;
+}
+
+.story p {
+    padding: 1rem 3rem 1rem 3rem;
+}
+
+.story .image {
+    z-index: -1;
+    width: 100%;
+    max-height: 60vw;
+    position: relative;
+    /* box-shadow: 0px 56px 100px 10px hsl(0, 0%, 9%) inset; */
+}
+
+.story .play-button {
+    width: 5vw;
+    position: absolute;
+    top: 70%;
+}
+
+
+.fresh-beans {
+    color: black;
+    padding: 3rem 3rem;
+}
+
+.fresh-beans img {
+    display: none;
+}
+
+.great-coffe {
+    background-color: var(--cover-clr);
+    background-image: url(images/gc-3.jpg);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+    padding: 8rem 3rem;
+    background-blend-mode: overlay;
+    color: white;
+}
+
+
+.about-us {
+    background-color: var(--cover-clr);
+    background-image: url(images/about-us.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 8rem 4rem;
+    position: relative;
+    text-align: center;
+    background-blend-mode: overlay;
+    color: white;
+}
+
+.icon-1,
+.icon-2,
+.icon-3 {
+    margin: auto;
+    margin-bottom: 2.5rem;
+    position: relative;
+    width: 6rem;
+}
+
+.icon-1::after,
+.icon-2::after,
+.icon-3::after {
+    font-family: 'Oswald', sans-serif;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--btn-clr);
+}
+
+.icon-1::after {
+    content: 'BEST BEANS';
+}
+
+.icon-2::after {
+    content: 'QUALITY MILK';
+}
+
+.icon-3::after {
+    content: 'PERFECT BLEND';
+}
+
+.cake-image {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cake-image img {
+    flex: 1;
+    object-fit: cover;
+}
+
+.blog {
+    text-align: center;
+    background: var(--normal-clr);
+    padding: 5rem 0;
+}
+
+
+.blog>*:not(button) {
+    width: 75vw;
+    margin: auto;
+}
+
+.blog>p {
+    margin-bottom: 2rem;
+}
+
+.blog-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    text-align: left;
+}
+
+.blog-cards>div {
+    background: white;
+}
+
+.blog-cards img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.blog-cards h4,
+.blog-cards p {
+    padding: 0 1rem;
+}
+
+.blog-cards p {
+    font-size: 16px;
+    line-height: 28px;
+}
+
+footer {
+    color: white;
+}
+
+.come-in {
+    background-color: var(--cover-clr);
+    background-image: url(images/coffe-cream.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    background-blend-mode: overlay;
+}
+
+.content {
+    margin: 0 3rem;
+    padding: 5rem 0;
+
+}
+
+.contact {
+    background: black;
+}
+
+button {
+    background-color: var(--btn-clr);
+    padding: 1rem 1.5rem;
+    border: 0;
+    box-shadow: 0;
+    margin-top: 1rem;
+}
+
+button:hover {
+    opacity: .7;
+}
+
+button a {
+    color: white;
+    letter-spacing: 3px;
+    font-size: 15px;
+}
+
+.content h4 {
+    color: var(--btn-clr);
+    margin: 1.5rem 0 8px 0;
+}
+
+.content p {
+    margin: 0;
+}
+
+.opacity-effect {
+    opacity: 0;
+    transform: scale(.85);
+    transition: transform .7s, opacity .5s;
+}
+
+.align-left {
+    transform: translateX(-30%) scale(.85);
+}
+
+.align-right {
+    transform: translateX(60%) scale(.85);
+}
+
+.active {
+    opacity: 1;
+    transform: translate(0) scale(1);
+}
+
+
+
+
+/* ********************************************************************************* */
+@media (min-width: 45em) {
+    .about-us {
+        background-position: bottom;
+    }
+
+    .story .play-button {
+        top: 60%;
+    }
+
+    .icons {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    footer {
+        display: flex;
+    }
+
+    footer>* {
+        flex-grow: 1;
+    }
+}
+
+/* ***************************************************************************** */
+@media (min-width: 60em) {
+
+    nav ul {
+        flex-direction: row;
+        padding-top: 1.5rem;
+    }
+
+    nav a {
+        padding: .5rem;
+    }
+
+    nav {
+        all: unset;
+    }
+
+    .nav-toggle-label {
+        display: none;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        padding: 0rem 2rem;
+    }
+
+
+
+    .menu {
+        flex-direction: row;
+    }
+
+    .story .image {
+        height: 80vh;
+    }
+
+    .story .play-button {
+        top: 60%;
+    }
+
+    .fresh-beans {
+        width: 100%;
+        padding: 0;
+        display: flex;
+        overflow: hidden;
+        justify-content: space-between;
+    }
+
+
+    .fresh-beans img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .fresh-beans-left {
+        max-width: 50%;
+
+        padding: 4rem 3rem;
+    }
+
+    .blog-cards {
+        flex-direction: row;
+    }
+
+    .great-coffe {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .great-coffe-right {
+        grid-column: 2;
+        padding: 3rem;
+    }
+
+
+
+
+}
